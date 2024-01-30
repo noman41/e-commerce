@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.127-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <PublishAssetsDirectory>$(MSBuildProjectDirectory)\dist\pointofsale.client\</PublishAssetsDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Remove="src\app\views\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\app\views\**" />
+  </ItemGroup>
+</Project>
